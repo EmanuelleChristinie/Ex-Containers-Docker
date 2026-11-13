@@ -1,20 +1,21 @@
 # Laboratório Docker — Integração DevOps (Unidade 03)
 
-API desenvolvida em **ASP.NET Core** containerizada com **Docker**, demonstrando o ciclo de vida completo de implantação: build multi-stage, versionamento de imagens por tags, configuração externa por variáveis de ambiente, promoção entre ambientes (*Staging* e *Production*), verificação de saúde (*Health Check*), *Rollback* e orquestração com *Docker Compose*.
+Repositório da API desenvolvida em **ASP.NET Core** containerizada com **Docker**, cobrindo o ciclo completo de entrega contínua: construção *multi-stage*, versionamento de imagens por tags, variáveis de ambiente para separação de contextos (*Staging* e *Production*), verificação de saúde (*Health Check*), simulação de falha controlada, *Rollback* e orquestração automatizada com *Docker Compose*.
 
 ---
 
 ## 📋 Pré-requisitos
 
-* [.NET 10 SDK](https://dotnet.microsoft.com/)
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/) (em execução)
-* [Git](https://git-scm.com/)
+Certifique-se de ter as seguintes ferramentas instaladas e operacionais na sua máquina:
+* [.NET SDK](https://dotnet.microsoft.com/)[cite: 1]
+* [Docker Desktop / Docker Engine](https://www.docker.com/) (em execução)
+* [Git](https://git-scm.com/)[cite: 1]
 
 ---
 
-## 🏗️ Construção da Imagem (Build)
+## 🏗️ 1. Construção da Imagem (Build v1.0.0)
 
-Na raiz do projeto (onde está o `Dockerfile`), construa a primeira versão da imagem:
+Na pasta raiz do projeto (onde se encontram o código-fonte e o `Dockerfile`), execute o comando para construir a primeira versão da imagem:
 
 ```bash
 docker build -t devops-webapi:1.0.0 .
